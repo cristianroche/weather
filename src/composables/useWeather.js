@@ -14,7 +14,7 @@ export default function useWeather() {
     error.value = "";
 
     try {
-      const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=${apiKey}`;
+      const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=${apiKey}`;
       const { data: geocodingData } = await axios.get(geocodingUrl);
 
       const { lat, lon } = geocodingData[0];
